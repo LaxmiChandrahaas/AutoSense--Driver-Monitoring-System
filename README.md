@@ -1,4 +1,4 @@
-# 🚗💤 AutoSense - Driver Monitoring System — OpenCV + Raspberry Pi Pico (Wokwi Simulation)
+# AutoSense - Driver Monitoring System — OpenCV + Raspberry Pi Pico (Wokwi Simulation)
 
 A real-time driver drowsiness and distraction detection system. A webcam
 feed is analyzed with **OpenCV** and **MediaPipe Face Landmarker** to track
@@ -11,7 +11,7 @@ simulation, wired up to your real, local Python vision pipeline.
 
 ---
 
-## ✨ Features
+## Features
 
 - Real-time eye aspect ratio (EAR) tracking → blink counting & drowsy-eye detection
 - Mouth aspect ratio (MAR) tracking → yawn counting
