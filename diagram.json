@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Driver Monitor Project",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": 0, "left": -50, "attrs": {} },
+
+    { "type": "wokwi-resistor", "id": "r_green", "top": -60, "left": 140, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led_green", "top": -70, "left": 190, "attrs": { "color": "green" } },
+
+    { "type": "wokwi-resistor", "id": "r_yellow", "top": 0, "left": 140, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led_yellow", "top": -10, "left": 190, "attrs": { "color": "yellow" } },
+
+    { "type": "wokwi-resistor", "id": "r_red", "top": 60, "left": 140, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led_red", "top": 50, "left": 190, "attrs": { "color": "red" } },
+
+    { "type": "wokwi-buzzer", "id": "buzzer1", "top": 120, "left": 190, "attrs": { "volume": "1" } }
+  ],
+  "connections": [
+    [ "pico:GP16", "r_green:1", "green", [ "h30" ] ],
+    [ "r_green:2", "led_green:A", "green", [ "h10" ] ],
+    [ "led_green:C", "pico:GND.1", "black", [ "v100", "h-260" ] ],
+
+    [ "pico:GP17", "r_yellow:1", "yellow", [ "h30" ] ],
+    [ "r_yellow:2", "led_yellow:A", "yellow", [ "h10" ] ],
+    [ "led_yellow:C", "pico:GND.1", "black", [ "v60", "h-260" ] ],
+
+    [ "pico:GP18", "r_red:1", "red", [ "h30" ] ],
+    [ "r_red:2", "led_red:A", "red", [ "h10" ] ],
+    [ "led_red:C", "pico:GND.1", "black", [ "v-20", "h-260" ] ],
+
+    [ "pico:GP19", "buzzer1:1", "orange", [ "h30" ] ],
+    [ "buzzer1:2", "pico:GND.1", "black", [ "v-80", "h-260" ] ]
+  ],
+  "dependencies": {}
+}
